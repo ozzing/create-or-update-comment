@@ -1,4 +1,4 @@
-name: Pull Request Warning
+name: 🚨 PR Warning 🚨
 on:
   pull_request:
     types: [opened]
@@ -10,11 +10,11 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: PR Warning
+      - name: 🚨 PR Warning 🚨
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            merge와 동시에 ${{ github.event.pull_request.base.ref }} 환경에 바로 반영됩니다.
-            실행 중인 workflow에 영향이 갈 수 있습니다. 그래도 하시겠습니까?
-          reactions: 'rocket'
+            🚧 merge와 동시에 **${{ github.event.pull_request.base.ref }} 환경**에 바로 반영됩니다.
+            🚧 **실행 중인 workflow**에 영향이 갈 수 있습니다. 그래도 하시겠습니까? 😈
+          reactions: 'eyes'
